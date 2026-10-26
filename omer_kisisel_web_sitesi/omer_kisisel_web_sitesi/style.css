@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --background: #0b1020;
+  --panel: #121a2e;
+  --text: #edf2ff;
+  --muted: #a9b4cc;
+  --accent: #79a8ff;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 50% 0%, #1b2c50 0, var(--background) 48%);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+.navbar {
+  background: rgba(8, 13, 27, 0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.navbar-brand { letter-spacing: -0.4px; }
+.nav-about { color: var(--muted); }
+.nav-about:hover { color: white; }
+
+.hero {
+  padding: 100px 12px 85px;
+  max-width: 850px;
+  margin: auto;
+}
+
+.avatar {
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 24px;
+  border: 1px solid rgba(121,168,255,0.6);
+  border-radius: 24px;
+  background: rgba(121,168,255,0.12);
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 1.45rem;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 5vw, 3.7rem);
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.15;
+}
+
+h1 span { color: var(--accent); }
+
+.lead {
+  color: var(--muted);
+  max-width: 620px;
+  margin: 20px auto 0;
+  line-height: 1.8;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0b1020;
+  font-weight: 700;
+  padding: 11px 22px;
+  border-radius: 10px;
+}
+
+.btn-primary:hover {
+  background: #a2c2ff;
+  border-color: #a2c2ff;
+  color: #0b1020;
+}
+
+.about-card {
+  max-width: 850px;
+  margin: 0 auto 90px;
+  padding: clamp(24px, 5vw, 48px);
+  background: rgba(18, 26, 46, 0.88);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 22px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.18);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.about-card > p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.info-box {
+  height: 100%;
+  padding: 18px;
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+}
+
+.info-label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.info-box strong { font-size: 0.95rem; }
+
+footer {
+  padding: 25px 12px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 576px) {
+  .hero { padding-top: 72px; padding-bottom: 65px; }
+  h1 { letter-spacing: -1px; }
+}
